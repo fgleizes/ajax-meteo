@@ -1,0 +1,28 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    font-size: 3em;
+}
+i.wi {
+    font-size: 5em;
+    line-height: 3em;
+}
+h2{
+    font-size: 2em;
+}
+.tooltip {
+    display: none;
+}
