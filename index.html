@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>La météo chez vous !</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel='stylesheet' href='./css/weather-icons.min.css' />
 </head>
 <body>
     
+    <section id="app">
+        <h1>
+            <span id="ville">Localisation...</span>
+            <span class="tooltip">Tapez une autre ville si vous le souhaitez</span>
+        </h1>
+
+        <i class="wi"></i>
+        
+        <h2>
+            <span id="temperature"></span> C° (<span id="conditions"></span>)
+        </h2>
+
+    </section>
+
     <script src="app.js"></script>
 </body>
 </html>
