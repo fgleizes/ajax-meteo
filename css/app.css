@@ -1,3 +1,18 @@
+.clear {
+    background-image: "../images/degage.jpg";
+}
+
+.clouds {
+    background-image: (url(https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/09/04/node_432712/1577042/public/2019/09/04/B9720783478Z.1_20190904063836_000%2BGD8ECKUBU.1-0.jpg?itok=g5LH5Ut8));
+}
+
+.rain {
+    background-image: "../images/pluvieux.jpg";
+}
+
+.snow {
+    background-image: "../images/neigeux.jpg";
+}
 
 * {
     -webkit-box-sizing: border-box;
