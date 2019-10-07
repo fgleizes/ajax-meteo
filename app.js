@@ -32,6 +32,15 @@ async function main(withIp = true){
     const meteo = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ville}&APPID=b7f13582854c2cf55297dfdbd7b8a665&lang=fr&units=metric`)
         .then(resultat => resultat.json())
         .then(json => json)
+
+    const previsionsMeteo = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${ville}&APPID=b7f13582854c2cf55297dfdbd7b8a665&lang=fr&units=metric`)
+        .then(resultat => resultat.json())
+        .then(json => json)
+        
+    console.log(previsionsMeteo);
+
+    const demain = new Date(previsionsMeteo.list[0].dt*1000);
+    console.log(demain.getDate() + "/" + (demain.getMonth() + 1) + "/" + demain.getFullYear() + " à " + demain.getHours() + "h00");
     
     displayWeatherInfos(meteo)
 }
