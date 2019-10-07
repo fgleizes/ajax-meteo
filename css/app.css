@@ -1,17 +1,20 @@
 .clear {
-    background-image: "../images/degage.jpg";
+    background-color: skyblue;
+    background-image: url(https://www.plurielle.ma/wp-content/uploads/2017/09/m%C3%A9t%C3%A9o1.jpg);
 }
 
 .clouds {
-    background-image: (url(https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/09/04/node_432712/1577042/public/2019/09/04/B9720783478Z.1_20190904063836_000%2BGD8ECKUBU.1-0.jpg?itok=g5LH5Ut8));
+    background-color: grey;
+    background-image: url(https://siena.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/09/04/node_432712/1577042/public/2019/09/04/B9720783478Z.1_20190904063836_000%2BGD8ECKUBU.1-0.jpg?itok=g5LH5Ut8);
 }
 
 .rain {
-    background-image: "../images/pluvieux.jpg";
+    background-color: grey;
+    background-image: url(http://img.over-blog-kiwi.com/0/88/88/58/20140530/ob_091afb_dsc06723.JPG);
 }
 
 .snow {
-    background-image: "../images/neigeux.jpg";
+    background-image: url("../images/neigeux.jpg");
 }
 
 * {
@@ -21,23 +24,60 @@
 body {
     margin: 0;
     padding: 0;
+
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);
+
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-h1{
-    font-size: 3em;
+
+    background-position: center;
+    background-size: cover;
 }
 i.wi {
     font-size: 5em;
     line-height: 3em;
 }
+h1{
+    font-size: 3em;
+    position: relative;
+}
 h2{
     font-size: 2em;
 }
-.tooltip {
-    display: none;
+h3{
+    margin: 0;
+    font-size: 1em;
 }
+.tooltip {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+    transition: opacity .3s, top .5s;
+}
+h1:hover .tooltip {
+    top: -50px;
+    opacity: 1;
+}
+#app {
+    width: 90%;
+}
+
+/* #forecast{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+} */
