@@ -1,2 +1,2 @@
 # Meteo
-Application météo en AJAX
+Application météo API/AJAX
