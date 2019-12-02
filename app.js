@@ -17,31 +17,23 @@ async function main(withIp = true){
     if (withIp) {
         // On récupère l'adresse IP de l'utilisateur grâce à l'API ipify.org,
         const ip = await fetch('https://api.ipify.org?format=json')
-            .then(resultat => resultat.json())
-            .then(json => json.ip)
-    
-        // pour retrouver sa ville de connexion grâce à l'API ipsatck.com,
+        .then(resultat => resultat.json())
+        .then(json => json.ip)
+        
+        // pour retrouver sa ville de connexion grâce à l'API ipsatck.com, (lien non sécurisé avec le plan gratuit)
         ville = await fetch(`http://api.ipstack.com/${ip}?access_key=13d6aa2601f46509be09d76eb59a55ce`)
-            .then(resultat => resultat.json())
-            .then(json => json.city)
-    }else{
+        .then(resultat => resultat.json())
+        .then(json => json.city)
+        
+    } else {
         ville = document.querySelector('#ville').textContent;
     }
 
-    //et récupérer les informations météos grâce à l'API openweathermap.org !
-    const meteo = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ville}&APPID=b7f13582854c2cf55297dfdbd7b8a665&lang=fr&units=metric`)
+    // et récupérer les informations météos grâce à l'API openweathermap.org en indiquant le nom de la ville!
+    const meteo = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ville}&APPID=b7f13582854c2cf55297dfdbd7b8a665&lang=fr&units=metric`)
         .then(resultat => resultat.json())
         .then(json => json)
 
-    // const previsionsMeteo = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${ville}&APPID=b7f13582854c2cf55297dfdbd7b8a665&lang=fr&units=metric`)
-    //     .then(resultat => resultat.json())
-    //     .then(json => json)
-        
-    // console.log(previsionsMeteo);
-
-    // const demain = new Date(previsionsMeteo.list[0].dt*1000);
-    // console.log(demain.getDate() + "/" + (demain.getMonth() + 1) + "/" + demain.getFullYear() + " à " + demain.getHours() + "h00");
-    
     displayWeatherInfos(meteo)
 }
 
@@ -73,7 +65,7 @@ ville.addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
         e.preventDefault();
         ville.contentEditable = false;
-        main(false);
+        main(false, false);
     }
 })
 

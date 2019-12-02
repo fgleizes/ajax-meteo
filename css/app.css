@@ -1,5 +1,6 @@
 .clear {
-    background-color: skyblue;
+    /* background-color: skyblue; */
+    background-color: rgb(71, 127, 201);
     background-image: url(https://www.plurielle.ma/wp-content/uploads/2017/09/m%C3%A9t%C3%A9o1.jpg);
 }
 
@@ -35,6 +36,8 @@ body {
     align-items: center;
     height: 100vh;
 
+    background-color: rgb(71, 127, 201);
+    background-image: url(https://www.plurielle.ma/wp-content/uploads/2017/09/m%C3%A9t%C3%A9o1.jpg);
     background-position: center;
     background-size: cover;
 }
