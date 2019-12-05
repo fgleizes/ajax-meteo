@@ -4,6 +4,7 @@ const weatherIcons = {
     "Clear": "wi wi-day-sunny",
     "Snow": "wi wi-day-snow",
     "Mist": "wi wi-day-fog",
+    "Fog": "wi wi-day-fog",
     "Drizzle": "wi wi-day-sleet",
 }
 

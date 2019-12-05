@@ -18,6 +18,14 @@
     background-image: url("../images/neigeux.jpg");
 }
 
+.fog {
+    background-image: url("../images/fog-background-2.jpg");
+}
+
+.mist {
+    background-image: url("../images/fog-background-2.jpg");
+}
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
